@@ -6,9 +6,12 @@ const PostContainer=props =>{
     <div className='post-container'>    
         {props.users.map(props => 
             <div key={props.id}>
-            <p>{props.username}</p>
-            <img src={props.imageUrl} />
-            <p>{props.likes} likes</p>
+            <div className='top'>
+            <img className= 'top-pic' src= {props.thumbnailUrl} />
+            <p className='username'>{props.username}</p>
+            </div>
+            <img class='post-pic'src={props.imageUrl} />
+            <p class='likes'>{props.likes} likes</p>
                 <CommentSection 
                     comments={props.comments} />
             </div>

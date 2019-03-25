@@ -1,0 +1,51 @@
+.searchbar-container{
+    display:flex;
+    align-items:center;
+}
+.input{
+    height:20px;
+    margin-left:150px;
+    text-align:center;
+    border-radius:8px;
+}
+.post-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    width:60%;
+}
+.post-pic{
+    height:400px;
+    width:500px;
+}
+.top{
+    display:flex;
+    align-items:center;
+    margin-left:15px;
+}
+.top-pic{
+    height:30px;
+    width:30px;
+    border-radius:20px;
+}
+.username{
+    margin-left:10px;
+}
+.likes{
+    font-weight:bold;
+    margin-left:15px;
+}
+.comments-contaier{
+    margin-left:15px;
+    display:flex;
+}
+.comment-input{
+    margin-left:15px;
+    border-radius:3px;
+    width:70%;
+    margin-bottom:30px;
+}
+.user{
+    font-weight:bold;
+    margin-right:15px;
+}
