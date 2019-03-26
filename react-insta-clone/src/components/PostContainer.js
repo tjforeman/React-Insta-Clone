@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import CommentSection from './CommentSection'
 import PropTypes from 'prop-types';
 import heart from './insta-heart.png'
@@ -19,8 +19,7 @@ const PostContainer=props =>{
             <img className='bottom-pic' src={comment} />
             </div>
             <p class='likes'>{props.likes} likes</p>
-                <CommentSection 
-                    comments={props.comments} />
+                <CommentSection comments={props.comments}  />
             </div>
         )} 
     </div>)

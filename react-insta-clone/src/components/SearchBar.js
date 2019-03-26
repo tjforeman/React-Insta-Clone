@@ -13,7 +13,9 @@ const SearchBar = props =>{
         <img className='camera' src={camera}/>
          <img className='insta' src={insta}/>
          </div>
+         <form>
          <input className='input' placeholder='search'></input>
+         </form>
          <div className='icons'>
          <img className='compass' src={compass} />
          <img className='heart' src={heart} />

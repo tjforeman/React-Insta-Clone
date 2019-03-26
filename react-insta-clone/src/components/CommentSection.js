@@ -1,9 +1,41 @@
-import React from 'react'
+import React, {Component}from 'react'
 import Comment from './comment'
 
-const CommentSection = props =>{
-    return <div className='comment-container' key={props.id} >{props.comments.map((props) =>
-        <Comment username={props.username} text={props.text} /> 
-   )} <p>{props.timestamp}</p><input className='comment-input' placeholder='add a comment ...'></input></div>;
+class CommentSection extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            comments: props.comments
+        }
     }
-export default CommentSection
+    handleChanges= event =>{
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+    };
+    submitComment= event =>{
+        event.preventDefault();
+        this.setState({
+            comments: [...this.state.comments,{
+         text: this.state.comment,
+         username: 'philzcoffee'
+                }
+            ]
+        })
+    }
+    render(){
+        return(
+        <div>
+        {this.state.comments.map((props) => 
+        <Comment username={props.username} key={props.id} text={props.text} />)}
+        <form onSubmit={this.submitComment}>
+                <input className='comment-input' type="text" name='comment' placeholder = 'add a comment...' value={this.state.comment} onChange={this.handleChanges}/>
+        </form>
+        </div>
+        )
+    }
+}
+
+
+        export default CommentSection
+

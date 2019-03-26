@@ -10,14 +10,17 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      users : dummyData,
+      users :[]
     }
+  }
+  componentDidMount(){
+    this.setState({users: dummyData});
   }
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer users={this.state.users}/>
+        <PostContainer users={this.state.users} />
       </div>
     );
   }
