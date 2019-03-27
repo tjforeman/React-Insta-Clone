@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import PostsPage from './components/PostsPage'
 import withAuthenticate from './authentication/withAuthenticate'
+import Login from './components/login'
 
-const ComponentFromWithAuthenticate = withAuthenticate(PostsPage);
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
 
 class App extends Component {
   constructor(){
