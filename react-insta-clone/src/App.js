@@ -10,17 +10,32 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      users :[]
+      users :[],
+      filteredPosts:[],
     }
   }
   componentDidMount(){
     this.setState({users: dummyData});
   }
+  searchItems = event =>{
+    let search= this.state.users.filter(post =>{
+      if (post.username.includes(event.target.value)) {
+        console.log(event.target.value)
+        return post;
+      }
+    });
+    this.setState({filteredPosts:search});
+  };
+
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer users={this.state.users} />
+        <SearchBar searchItems={this.searchItems}  />
+        <PostContainer users={
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts: this.state.users
+          } />
       </div>
     );
   }

@@ -6,6 +6,7 @@ import heart from './insta-heart.png'
 import profile from './insta-profile.png'
 
 
+
 const SearchBar = props =>{
     return (
         <div className='searchbar-container'>
@@ -13,9 +14,7 @@ const SearchBar = props =>{
         <img className='camera' src={camera}/>
          <img className='insta' src={insta}/>
          </div>
-         <form>
-         <input className='input' placeholder='search'></input>
-         </form>
+         <input className='input' type='text' placeholder='search'  onKeyDown={props.searchItems}></input>
          <div className='icons'>
          <img className='compass' src={compass} />
          <img className='heart' src={heart} />

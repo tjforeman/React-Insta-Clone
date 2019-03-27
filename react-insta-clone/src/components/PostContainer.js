@@ -8,7 +8,7 @@ const PostContainer=props =>{
     return( 
     <div className='post-container'>    
         {props.users.map(props => 
-            <div key={props.id}>
+            <div key={props.id} post={props.post}>
             <div className='top'>
             <img className= 'top-pic' src= {props.thumbnailUrl} />
             <p className='user'>{props.username}</p>
@@ -19,7 +19,8 @@ const PostContainer=props =>{
             <img className='bottom-pic' src={comment} />
             </div>
             <p class='likes'>{props.likes} likes</p>
-                <CommentSection comments={props.comments}  />
+                <CommentSection 
+                    comments={props.comments}  />
             </div>
         )} 
     </div>)

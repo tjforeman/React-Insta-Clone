@@ -18,7 +18,7 @@ class CommentSection extends Component {
         this.setState({
             comments: [...this.state.comments,{
          text: this.state.comment,
-         username: 'philzcoffee'
+         username: 'Coolperson'
                 }
             ]
         })
