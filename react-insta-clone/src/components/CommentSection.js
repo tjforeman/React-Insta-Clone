@@ -1,5 +1,14 @@
 import React, {Component}from 'react'
 import Comment from './comment'
+import styled from "styled-components";
+
+const NewComment = styled.input`
+margin-left:15px;
+    border-radius:3px;
+    width:95%;
+    height:30px;
+    margin-bottom:30px;
+`;
 
 class CommentSection extends Component {
     constructor(props){
@@ -29,7 +38,11 @@ class CommentSection extends Component {
         {this.state.comments.map((props) => 
         <Comment username={props.username} key={props.id} text={props.text} />)}
         <form onSubmit={this.submitComment}>
-                <input className='comment-input' type="text" name='comment' placeholder = 'add a comment...' value={this.state.comment} onChange={this.handleChanges}/>
+                <NewComment type="text" 
+                 name='comment'
+                 placeholder = 'add a comment...' 
+                 value={this.state.comment} 
+                 onChange={this.handleChanges}/>
         </form>
         </div>
         )

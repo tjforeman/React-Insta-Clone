@@ -59,7 +59,7 @@ margin:0;
 const Likes= styled.p`
 font-weight:bold;
 margin-left:15px;
-`
+`;
 
 const PostContainer=props =>{
     return( 
