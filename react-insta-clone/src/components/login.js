@@ -1,5 +1,33 @@
 import React, {Component} from 'react'
 import insta from './insta-insta.jpg';
+import styled from "styled-components";
+
+const LoginDiv = styled.div`
+width:30%;
+  margin-left:40%;
+  margin-top:15%;
+  border:1px solid gray;
+  display:flex;
+  flex-direction:column;
+`;
+
+const LoginImg= styled.img`
+height:110px;
+margin-bottom:10px;
+`;
+
+const LoginForm = styled.input`
+margin-bottom:20px;
+height:40px;
+text-align:center;
+`;
+
+const LoginButton= styled.button`
+height:50px;
+background-color:black;
+color:white;
+`;
+
 
 class Login extends Component{
 constructor(){
@@ -19,12 +47,14 @@ signOn= event => {
 
     render(){
     return(
-        <div className='login'>
-        <img className='log-pic' src={insta} />
-          <input className='log-form' placeholder='username' onChange={this.submitName}></input>  
-          <input className='log-form' placeholder='password'></input>
-        <button className='log-button' onClick={this.signOn}>Login</button>
-        </div>
+        <LoginDiv>
+        <LoginImg src={insta} />
+          <LoginForm placeholder='username' onChange={this.submitName} />  
+          <LoginForm  placeholder='password' />
+        <LoginButton className='log-button'
+         onClick={this.signOn}>
+         Login</LoginButton>
+        </LoginDiv>
     )
 }
 }
