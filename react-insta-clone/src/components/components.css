@@ -1,40 +1,4 @@
-.searchbar-container{
-    display:flex;
-    align-items:center;
-    width:750px;
-    margin-left:25%;
-    justify-content:space-between;
-    margin-bottom:30px;
-}
-.head{
-    display:flex;
-    align-content:center;
-}
-.camera{
-    width:50px;
-    height:50px;
-}
-.insta{
-    width:120px;
-    height:50px;
-}
-.compass{
-    width:40px;
-    height:40px;
-}
-.heart{
-    width:60px;
-    height:40px;
-}
-.profile{
-    width:40px;
-    height:40px;
-}
-.input{
-    height:20px;
-    text-align:center;
-    border-radius:8px;
-}
+
 .post-container{
     display:flex;
     flex-direction:column;
